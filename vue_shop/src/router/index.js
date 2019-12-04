@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import login from '@/components/login'
+import login from '@/components/Login'
 import home from '@/components/Home'
-import Welcome from '@/components/Welcome.vue'
+import welcome from '@/components/Welcome.vue'
 import users from '@/components/user/Users.vue'
-import Rights from '@/components/power/Rights.vue'
-import Roles from '@/components/power/Roles.vue'
-import Cate from '@/components/goods/Cate.vue'
-import Params from '@/components/goods/Params.vue'
+import rights from '@/components/power/Rights.vue'
+import roles from '@/components/power/Roles.vue'
+import cate from '@/components/goods/Cate.vue'
+import params from '@/components/goods/Params.vue'
+import goodsList from '@/components/goods/List.vue'
+import goodsAdd from '@/components/goods/Add.vue'
 
 Vue.use(Router)
 
@@ -15,7 +17,7 @@ const router = new Router({
   mode: 'history',
   routes: [
     {
-      redirect:'/login',
+      redirect: '/login',
       path: '',
     },
     {
@@ -25,36 +27,45 @@ const router = new Router({
     {
       path: '/home',
       component: home,
-      redirect:'/Welcome',
-      children:[
+      redirect: '/welcome',
+      children: [
         {
-          path: '/Welcome',
-          component: Welcome
+          path: '/welcome',
+          component: welcome
         },
         {
           path: '/users',
-          component: users
+          component: users,
+         
         },
         {
           path: '/rights',
-          component: Rights
+          component: rights
         },
         {
           path: '/roles',
-          component: Roles
+          component: roles,
         },
         {
           path: '/categories',
-          component: Cate
+          component: cate
         },
         {
           path: '/params',
-          component: Params
+          component: params
+        },
+        {
+          path: '/goods',
+          component: goodsList
+        },
+        {
+          path: '/goods/add',
+          component: goodsAdd
         },
       ]
     },
-   
-   
+
+
   ]
 })
 
