@@ -1,17 +1,31 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import login from '@/components/Login'
-import home from '@/components/Home'
-import welcome from '@/components/Welcome.vue'
-import users from '@/components/user/Users.vue'
-import rights from '@/components/power/Rights.vue'
-import roles from '@/components/power/Roles.vue'
-import cate from '@/components/goods/Cate.vue'
-import params from '@/components/goods/Params.vue'
-import goodsList from '@/components/goods/List.vue'
-import goodsAdd from '@/components/goods/Add.vue'
-import order from '@/components/order/Order.vue'
-import reports from '@/components/reports/Reports.vue'
+// import login from '@/components/Login'
+// import home from '@/components/Home'
+// import welcome from '@/components/Welcome.vue'
+// import users from '@/components/user/Users.vue'
+// import rights from '@/components/power/Rights.vue'
+// import roles from '@/components/power/Roles.vue'
+// import cate from '@/components/goods/Cate.vue'
+// import params from '@/components/goods/Params.vue'
+// import goodsList from '@/components/goods/List.vue'
+// import goodsAdd from '@/components/goods/Add.vue'
+// import order from '@/components/order/Order.vue'
+// import reports from '@/components/reports/Reports.vue'
+
+const login = () => import('@/components/Login')
+const home = () => import('@/components/Home')
+const welcome = () => import('@/components/Welcome.vue')
+const users = () => import('@/components/user/Users.vue')
+const rights = () => import('@/components/power/Rights.vue')
+const roles = () => import('@/components/power/Roles.vue')
+const cate = () => import('@/components/goods/Cate.vue')
+const params = () => import('@/components/goods/Params.vue')
+const goodsList = () => import('@/components/goods/List.vue')
+const goodsAdd = () => import('@/components/goods/Add.vue')
+const order = () => import('@/components/order/Order.vue')
+const reports = () => import('@/components/reports/Reports.vue')
+
 
 Vue.use(Router)
 
