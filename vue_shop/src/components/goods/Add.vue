@@ -1,11 +1,7 @@
 <template>
   <div>
     <!-- 面包屑导航区域 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>商品管理</el-breadcrumb-item>
-      <el-breadcrumb-item>添加商品</el-breadcrumb-item>
-    </el-breadcrumb>
+     <Header></Header>
 
     <!-- 卡片视图 -->
     <el-card>
@@ -94,6 +90,7 @@
 </template>
 
 <script>
+import Header from '@/components/header/Header'
 import _ from 'lodash'
 export default {
   data() {
@@ -151,6 +148,9 @@ export default {
       previewVisible: false,
        url: 'https://renoblog.xyz/'
     };
+  },
+  components:{
+    Header
   },
   created() {
     this.getCateList();

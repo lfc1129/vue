@@ -1,11 +1,7 @@
 <template>
   <div>
     <!-- 面包屑导航区域 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>订单管理</el-breadcrumb-item>
-      <el-breadcrumb-item>订单列表</el-breadcrumb-item>
-    </el-breadcrumb>
+    <Header></Header>
 
     <!-- 卡片视图区域 -->
     <el-card>
@@ -81,6 +77,7 @@
 </template>
 
 <script>
+import Header from '@/components/header/Header'
 import cityData from './citydata.js'
 export default {
   data() {
@@ -109,6 +106,9 @@ export default {
       progressVisible: false,
       progressInfo: []
     };
+  },
+   components:{
+    Header
   },
   created() {
     this.getOrderList();

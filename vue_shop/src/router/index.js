@@ -38,39 +38,47 @@ const router = new Router({
         {
           path: '/users',
           component: users,
-         
+          meta:['用户管理','用户列表']
         },
         {
           path: '/rights',
-          component: rights
+          component: rights,
+          meta:['权限管理','权限列表']
         },
         {
           path: '/roles',
           component: roles,
+          meta:['权限管理','角色列表']
         },
         {
           path: '/categories',
-          component: cate
+          component: cate,
+          meta:['商品管理','商品分类']
         },
         {
           path: '/params',
-          component: params
+          component: params,
+          meta:['商品管理','参数列表']
         },
         {
           path: '/goods',
-          component: goodsList
+          component: goodsList,
+          meta:['商品管理','商品列表']
         },
         {
           path: '/goods/add',
-          component: goodsAdd
+          component: goodsAdd,
+          meta:['商品管理','添加商品']
         },
         {
           path: '/orders',
-          component: order
+          component: order,
+          meta:['订单管理','订单列表']
         },
         {
           path: '/reports',
-          component: reports
+          component: reports,
+          meta:['数据统计','数据报表']
         },
       ]
     },

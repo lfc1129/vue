@@ -1,5 +1,13 @@
 <template>
-  <div>
-    <h3>Welcome</h3>
-  </div>
+  <h3>Welcome</h3>
 </template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>

@@ -1,11 +1,8 @@
 <template>
   <div>
         <!-- 面包屑导航区域 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>数据统计</el-breadcrumb-item>
-      <el-breadcrumb-item>数据报表</el-breadcrumb-item>
-    </el-breadcrumb>
+      <Header></Header>
+
      <!-- 卡片视图区域 -->
     <el-card>
       <!-- 2. 为ECharts准备一个具备大小（宽高）的Dom -->
@@ -15,6 +12,7 @@
 </template>
 
 <script>
+import Header from '@/components/header/Header'
 // 1. 导入 echarts
 import echarts from 'echarts'
 import _ from 'lodash'
@@ -54,6 +52,9 @@ export default {
         ]
       }
         }
+    },
+    components:{
+      Header
     },
     async mounted(){
          // 基于准备好的dom，初始化echarts实例

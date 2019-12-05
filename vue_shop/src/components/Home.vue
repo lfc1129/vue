@@ -12,7 +12,7 @@
     <el-container>
        <!-- 侧边栏 -->
       <el-aside :width="isCollapse ? '64px' : '200px'">
-         <div class="toggle-button" @click="toggleCollapse">|||</div>
+         <div class="toggle-button" @click="toggleCollapse"><></div>
          <!-- 侧边栏菜单区域 -->
         <el-menu
           class="el-menu-vertical-demo"

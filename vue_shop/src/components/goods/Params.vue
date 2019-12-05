@@ -1,11 +1,7 @@
 <template>
   <div>
     <!-- 面包屑导航区域 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>商品管理</el-breadcrumb-item>
-      <el-breadcrumb-item>参数列表</el-breadcrumb-item>
-    </el-breadcrumb>
+     <Header></Header>
     <!-- 卡片视图区域 -->
     <el-card>
       <!-- 警告区域 -->
@@ -121,6 +117,7 @@
 </template>
 
 <script>
+import Header from '@/components/header/Header'
 export default {
   data() {
     return {
@@ -186,6 +183,9 @@ export default {
       }
       return '静态属性'
     }
+  },
+   components:{
+    Header
   },
   created() {
     this.getCateList();

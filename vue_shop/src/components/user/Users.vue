@@ -1,11 +1,9 @@
 <template>
   <div>
     <!-- 面包屑导航区域 -->
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
-    </el-breadcrumb>
+   <Header></Header>
+
+   <!-- 卡片视图 -->
     <el-card class="box-card">
       <!-- 搜索与添加区域 -->
       <el-row :gutter="20">
@@ -121,6 +119,7 @@
 </template>
 
 <script>
+import Header from '@/components/header/Header'
 export default {
   data() {
       // 验证邮箱的规则
@@ -221,6 +220,9 @@ export default {
       // 已选中的角色Id值
       selectedRoleId: ''
     };
+  },
+  components:{
+    Header
   },
   created() {
     this.getUserList();
