@@ -32,7 +32,7 @@ Vue.use(VueQuillEditor)
 Vue.use(ElementUI)
 Vue.component('tree-table', TreeTable)
 // 配置请求的跟路径
-axios.defaults.baseURL = 'https://renoblog.xyz/api/private/v1/'
+axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
 axios.interceptors.request.use(config => {
   // console.log(config)
   NProgress.start()
