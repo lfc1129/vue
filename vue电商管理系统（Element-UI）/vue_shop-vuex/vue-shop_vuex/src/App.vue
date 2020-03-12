@@ -13,7 +13,7 @@
         <a-button type="primary" class="primary" @click="add()">添加</a-button>
       </header>
       <section class="main">
-        <input id="toggle-all" class="toggle-all" type="checkbox" @click="allSelectFun($event)"/>
+        <input id="toggle-all" class="toggle-all" type="checkbox" v-model="selectAllBtn" @click="allSelectFun()"/>
         <label for="toggle-all">Mark all as complete</label>
         <ul class="todo-list">
           <li v-for="site in tabList" :key="site.id">
@@ -88,13 +88,21 @@ export default {
 	typeFun(typeName) {
 		 this.$store.commit("tab",typeName);
 	},
-	allSelectFun(e){
-      this.$store.commit("allSelect",e.target.checked);
+	allSelectFun(val){
+      this.$store.commit("allSelect",val);
 	}
   },
   computed: {
     ...mapState(["inputValue","type","checked"]),
-	...mapGetters(["count",'tabList']),
+  ...mapGetters(["count",'tabList',"activeTab"]),
+  selectAllBtn: {
+      get: function() {
+        return this.activeTab.length === this.tabList.length;
+      },
+      set: function(newVal) {
+        this.allSelectFun(newVal);
+      }
+    }
   }
 };
 </script>
