@@ -14,8 +14,6 @@
 export default {
   data() {
     return {
-      show:false,
-      checked:false,
       num: null,
     };
   },

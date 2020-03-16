@@ -19,7 +19,7 @@ export default {
   props: ["list"],
   computed: {
     ListLength() {
-      return this.list.length > 0 ? this.list.length : 0;
+      return this.list.length;
     },
     finishNum() {
       return this.list.reduce(
