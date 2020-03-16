@@ -64,7 +64,6 @@ export default {
     async beforeMount(){
        if (!this.$route.query.geohash) {
             const address = await cityGuess();
-           
 			this.geohash = address.latitude + ',' + address.longitude;
 		}else{
 			this.geohash = this.$route.query.geohash
@@ -76,9 +75,7 @@ export default {
         this.SAVE_GEOHASH(this.geohash);
         // 记录当前经度纬度
 		this.RECORD_ADDRESS(res);
-		
 		this.hasGetData = true;
-
     },
     mounted(){
         //获取导航食品类型列表
@@ -123,8 +120,6 @@ export default {
      }
 }
 </script>
-
-
 <style lang="scss" scoped>
     @import 'src/style/mixin';
 	.link_search{
