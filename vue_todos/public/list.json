@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "skill": "学习vue",
+        "bool": true
+    },
+    {
+        "id": 2,
+        "skill": "学习react",
+        "bool": true
+    },
+    {
+        "id": 3,
+        "skill": "学习angular",
+        "bool": false
+    }
+]
