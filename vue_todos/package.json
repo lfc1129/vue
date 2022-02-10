@@ -11,7 +11,7 @@
     "ant-design-vue": "^1.4.11",
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.3",
     "todomvc-app-css": "^2.3.0",
